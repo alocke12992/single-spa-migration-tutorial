@@ -7,9 +7,10 @@ import configureStore from './store/configureStore'
 
 const store = configureStore()
 
-render(
+const Index = () => (
   <Provider store={store}>
-    <Page />
-  </Provider>,
-  document.getElementById('root')
+    <Page id={1}/>
+  </Provider>
 )
+
+export default Index

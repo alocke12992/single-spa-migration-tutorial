@@ -17,17 +17,17 @@ class Page extends Component {
   render() {
     let { displayedPokemons, isFetched } = this.props.page
 
-    let pokemons = displayedPokemons.map((pokemon, index) => {
+    let pokemons = displayedPokemons.map((pokemon) => {
       return (
-        <li className="pokemons__item">
-          <Pokemon pokemon={pokemon} key={index} />
+        <li className="pokemons__item" id={pokemon.id}>
+          <Pokemon pokemon={pokemon} key={pokemon.id} />
         </li>
       )
     })
 
     return (
       <div className="page">
-        <Search onChange={this.handleSearch.bind(this)} />
+        <Search onChange={this.handleSearch} />
         <ul className="pokemons">{isFetched ? <p>Loading...</p> : pokemons}</ul>
       </div>
     )

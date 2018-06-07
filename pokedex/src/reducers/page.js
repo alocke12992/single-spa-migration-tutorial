@@ -14,16 +14,17 @@ export default function page(state = initialState, action) {
   switch (action.type) {
     case FETCH_POKEMONS_REQUEST:
       return {
-        ...state,
-        isFetched: true
+        isFetched: false,
+        pokemons: state.pokemons,
+        displayedPokemons: state.displayedPokemons
       }
 
     case FETCH_POKEMONS_SUCCESS:
       const { pokemons } = action
 
       return {
-        ...state,
         pokemons,
+        displayedPokemons: state.displayedPokemons,
         isFetched: false
       }
 
@@ -31,7 +32,8 @@ export default function page(state = initialState, action) {
       const { displayedPokemons } = action
 
       return {
-        ...state,
+        isFetched: false,
+        pokemons: state.pokemons,
         displayedPokemons
       }
 
