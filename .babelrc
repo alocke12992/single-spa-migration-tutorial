@@ -1,7 +1,7 @@
 {
   "presets": [
     [
-      "env",
+      "babel-preset-env",
       {
         "targets": {
           "browsers": [
@@ -15,6 +15,9 @@
     ]
   ],
   "plugins": [
-    "syntax-dynamic-import"
+    "transform-object-rest-spread",
+    "transform-class-properties",
+    "syntax-dynamic-import",
+    "transform-function-bind"
   ]
 }
