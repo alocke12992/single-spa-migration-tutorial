@@ -24,7 +24,7 @@ function receivePokemons(json) {
   }
 }
 
-export function fetchPokemons() {
+export const fetchPokemons = () => {
   return dispatch => {
     dispatch(requestPokemons())
 
@@ -37,7 +37,7 @@ export function fetchPokemons() {
   }
 }
 
-export function filterPokemons(searchTerm) {
+export const filterPokemons = (searchTerm) => {
   return (dispatch, getState) => {
     const displayedPokemons = getState()
       .page.pokemons.filter(pokemon => {

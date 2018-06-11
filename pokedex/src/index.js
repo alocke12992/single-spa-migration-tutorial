@@ -9,7 +9,7 @@ const store = configureStore()
 
 const Index = () => (
   <Provider store={store}>
-    <Page id={1}/>
+    <Page />
   </Provider>
 )
 
