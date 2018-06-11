@@ -18,7 +18,7 @@ function menuItems() {
     <div>
       <li><a onClick={() => navigateToUrl('/')}>Home</a></li>
       <li><a onClick={() => navigateToUrl('/pokedex')}>Pokemon</a></li>
-      <li><a onClick={() => navigateToUrl('/emoji')}>Emoji</a></li>
+      <li><a onClick={() => navigateToUrl('/modal_gallery')}>Gallery</a></li>
     </div>
   )
 }
