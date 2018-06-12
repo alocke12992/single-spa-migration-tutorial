@@ -7,7 +7,7 @@ const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin')
 module.exports = {
   mode: 'development',
   entry: {
-    'single-spa.config': 'src/root-application/single-spa.config.js',
+    'single-spa.config': './single-spa.config.js',
   },
   output: {
     publicPath: '/dist/',
