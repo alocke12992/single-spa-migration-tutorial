@@ -17,7 +17,7 @@ class Dashboard extends Component {
         <ul>
           {courses.map(course => (
             <li key={course.id}>
-        <Link to={`/huge_apps/course/${course.id}`}>{course.name}</Link>
+              <Link to={`/huge_apps/course/${course.id}`}>{course.name}</Link>
             </li>
           ))}
         </ul>
